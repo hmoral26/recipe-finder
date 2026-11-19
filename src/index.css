@@ -1,0 +1,157 @@
+/* basic page styles */
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background-color: #f7f4ef;
+  color: #1c1c1c;
+  line-height: 1.5;
+}
+
+/* centers the whole app and limits how wide it can get */
+#root {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* flexbox for the recipe cards row */
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* one card */
+.recipe-card {
+  width: 180px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* makes the whole card clickable */
+.recipe-card button {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0.75rem;
+  cursor: pointer;
+  text-align: center;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* visible focus outline for keyboard users */
+.recipe-card button:focus {
+  outline: 3px solid #2d5a27;
+  outline-offset: 2px;
+}
+
+/* recipe image on the card */
+.recipe-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.recipe-card h3 {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+}
+
+/* small text under the recipe name */
+.ingredient-count {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* detail panel that shows after you click a card */
+.recipe-detail {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+.recipe-detail img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* search form uses flex */
+.search-box {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.search-box button {
+  padding: 0.5rem 1rem;
+  background: #2d5a27;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* stacks the search on very small screens */
+@media (max-width: 400px) {
+  .search-box {
+    flex-direction: column;
+  }
+  .search-box button {
+    width: 100%;
+  }
+}
+
+/* how to use box */
+.how-to-use {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.how-to-use h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* status messages (loading, empty, etc.) */
+.status {
+  margin: 1rem 0;
+  padding: 0.75rem;
+  background: #fff3cd;
+  border-radius: 4px;
+}
+
+/* error message styling */
+.error {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}
